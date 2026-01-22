@@ -185,7 +185,7 @@ with left:
 # ===============================
 with right:
     st.markdown(
-        "<h2 style='margin-left:130px;'>Compliance Analysis</h2>",
+        "<h2 style='margin-left:10px;'>Compliance Analysis</h2>",
         unsafe_allow_html=True
     )
 

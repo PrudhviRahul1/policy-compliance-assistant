@@ -1,48 +1,43 @@
-\# AI-Driven Policy Compliance Assistant
+# Policy Compliance Assistant
 
+An AI-powered Policy Compliance Assistant that analyzes employee scenarios
+and determines whether they comply with organizational policies using
+Machine Learning and Large Language Models (LLMs).
 
+---
 
-An AI-powered system that analyzes employee actions against organizational policies and determines compliance, risk level, and recommended actions.
+##  Features
 
+- Analyze employee actions against company policies
+- Classifies scenarios as Compliant or Violation
+- Risk assessment: Low / Medium / High
+- AI-generated explanations and decisions
+- Displays relevant policy clauses with definitions
+- Modern Streamlit-based UI
 
+---
 
-\## Features
+##  Tech Stack
 
-\- Policy compliance prediction (Compliant / Violation)
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas, NumPy
+- LLM-based reasoning
 
-\- Risk level assessment (Low / Medium / High)
+---
 
-\- AI-generated explanation and decision
+##  How to Run
 
-\- Relevant policy clause retrieval (RAG-lite)
+1. Install dependencies  
+   pip install -r requirements.txt
 
-\- Modern Streamlit UI (Glassmorphism design)
+2. Run the app  
+   streamlit run policy_app.py
 
+---
 
+## 🔒 Data Privacy
 
-\##  Tech Stack
-
-\- Python
-
-\- Streamlit
-
-\- Scikit-learn
-
-\- TF-IDF
-
-\- Random Forest
-
-\- OpenAI API (LLM explanations)
-
-
-
-\##  How to Run
-
-```bash
-
-pip install -r requirements.txt
-
-streamlit run policy\_app.py
-
-
-
+- No personal or sensitive data is shared
+- Datasets and notebooks are excluded from the repository

@@ -14,9 +14,6 @@ venv/
 # Models
 Models/*.pkl
 
-# Data (keep only sample if needed)
-Data/*.xlsx
-!Data/sample_*.xlsx
 
 # OS
 .DS_Store
@@ -32,3 +29,6 @@ Thumbs.db
 Notebook/
 *.ipynb
 .ipynb_checkpoints/
+
+
+Data/compliance_scenarios.xlsx

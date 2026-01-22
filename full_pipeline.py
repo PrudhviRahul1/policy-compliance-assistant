@@ -4,9 +4,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from llm_explanation import generate_decision
 
 # Load policy clauses
-policy_df = pd.read_excel(
-    r"C:\Users\HUSSAIN\Desktop\Policy_Compliance_Project\Data\policy_clauses_cleaned.xlsx"
-)
+policy_df = pd.read_excel("Data/policy_clauses_cleaned.xlsx")
+
 
 policy_texts = policy_df["clause"].tolist()
 

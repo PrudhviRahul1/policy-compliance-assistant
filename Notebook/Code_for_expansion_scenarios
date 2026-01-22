@@ -1,0 +1,91 @@
+import pandas as pd
+
+# Load base scenarios (Excel file)
+df = pd.read_excel(
+    r"C:\Users\HUSSAIN\Desktop\Policy_Compliance_Project\Data\compliance_scenarios.xlsx"
+)
+
+# Normalize column names (VERY IMPORTANT)
+df.columns = df.columns.str.strip().str.lower()
+
+expanded_rows = []
+
+# Variations
+time_variants = ["2 days", "5 days", "10 days", "15 days"]
+roles = ["Employee", "Manager", "Executive"]
+frequency = ["once", "repeatedly", "on multiple occasions"]
+contexts = [
+    "without approval",
+    "despite warnings",
+    "during non-emergency"
+]
+
+for _, row in df.iterrows():
+    base_text = row["scenario"]
+    label = row["label"]
+    risk = row["risk"]
+
+    # Keep original
+    expanded_rows.append([base_text, label, risk])
+
+    # Time-based variations
+    for t in time_variants:
+        if "days" in base_text:
+            expanded_rows.append([
+                base_text.replace("10 days", t),
+                label,
+                risk
+            ])
+
+    # Role-based variations
+    for r in roles:
+        if "Employee" in base_text:
+            expanded_rows.append([
+                base_text.replace("Employee", r),
+                label,
+                risk
+            ])
+
+    # Frequency-based variations
+    for f in frequency:
+        expanded_rows.append([
+            base_text + f" {f}",
+            label,
+            risk
+        ])
+
+    # 🔥 NEW: Role + Frequency combined variations (YOUR REQUEST)
+    for r in roles:
+        for f in frequency:
+            if "Employee" in base_text:
+                expanded_rows.append([
+                    base_text.replace("Employee", r) + f" {f}",
+                    label,
+                    risk
+                ])
+
+    # Context-based variations
+    for c in contexts:
+        expanded_rows.append([
+            base_text + f" {c}",
+            label,
+            risk
+        ])
+
+# Create expanded DataFrame
+expanded_df = pd.DataFrame(
+    expanded_rows,
+    columns=["scenario", "label", "risk"]
+)
+
+# Remove duplicates
+expanded_df.drop_duplicates(inplace=True)
+
+# Save expanded dataset
+expanded_df.to_excel(
+    r"C:\Users\HUSSAIN\Desktop\Policy_Compliance_Project\Data\compliance_scenarios_expanded.xlsx",
+    index=False
+)
+
+print("Expansion complete!")
+print("Total scenarios:", len(expanded_df))

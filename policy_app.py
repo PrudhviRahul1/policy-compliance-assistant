@@ -171,7 +171,7 @@ with left:
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
     scenario_text = st.text_area(
-        "  Enter Employee Scenario",
+        "Enter Employee Scenario",
         height=300,
         placeholder="Example: Employee left without informing anybody"
     )
@@ -223,13 +223,13 @@ with right:
 
             # EXPLANATION
             st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-            st.markdown("<h2 style='margin-left:195px;'>Explanation</h2>", unsafe_allow_html=True)
+            st.markdown("<h2 style='margin-left:10px;'>Explanation</h2>", unsafe_allow_html=True)
             st.write(explanation)
             st.markdown('</div>', unsafe_allow_html=True)
 
             # DECISION
             st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-            st.markdown("<h2 style='margin-left:217px;'>Decision</h2>", unsafe_allow_html=True)
+            st.markdown("<h2 style='margin-left:10px;'>Decision</h2>", unsafe_allow_html=True)
             st.write(decision)
             st.markdown('</div>', unsafe_allow_html=True)
 

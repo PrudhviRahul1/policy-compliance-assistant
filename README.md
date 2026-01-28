@@ -4,7 +4,7 @@ An AI-powered Policy Compliance Assistant that analyzes employee scenarios
 and determines whether they comply with organizational policies using
 Machine Learning and Large Language Models (LLMs).
 
----
+--
 
 ##  Features
 
@@ -15,7 +15,7 @@ Machine Learning and Large Language Models (LLMs).
 - Displays relevant policy clauses with definitions
 - Modern Streamlit-based UI
 
----
+--
 
 ##  Tech Stack
 
@@ -25,7 +25,7 @@ Machine Learning and Large Language Models (LLMs).
 - Pandas, NumPy
 - LLM-based reasoning
 
----
+--
 
 ##  How to Run
 
@@ -35,7 +35,7 @@ Machine Learning and Large Language Models (LLMs).
 2. Run the app  
    streamlit run policy_app.py
 
----
+--
 
 ## 🔒 Data Privacy
 

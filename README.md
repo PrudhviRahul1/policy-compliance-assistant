@@ -1,4 +1,4 @@
-# Policy Compliance Assistant
+# Policy Compliance Assistant.
 
 An AI-powered Policy Compliance Assistant that analyzes employee scenarios
 and determines whether they comply with organizational policies using
